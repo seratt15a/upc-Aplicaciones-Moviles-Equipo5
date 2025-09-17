@@ -4,9 +4,9 @@
   <h2>Carrera: Ingeniería de Software</h2>
   <h2>Ciclo: 2025-10</h2>
 <br>
-  <h2>Curso: 1ASI0730 Aplicaciones Web</h2>
-  <h2>Sección: 4378</h2>
-  <h2>Profesor: Angel Augusto Velasquez Nuñez</h2>
+  <h2>Curso: 1ACC0238 Aplicaciones para Dispositivos Móviles</h2>
+  <h2>Sección: 12614</h2>
+  <h2>Profesor: David Gerardo Quevedo Velasco</h2>
 <br>
  <h1>Informe TF1</h1>
   <h2>Startup: IA: Inteligencia Artesanal</h2>
@@ -14,7 +14,7 @@
 <br>
   <h2>Integrantes</h2>
 <ul style="list-style: none;">
-  <li><h3>U202222001 Aliaga Urbina Wilder Gonzalo</h3></li>
+  <li><h3>U202310425 Aguirre Castillo Sergio Cesar</h3></li>
   <li><h3>U202220138 Ramírez Cabrera Kenyi Efraín</h3></li>
   <li><h3>U202223286 Rodriguez Parco Joseph Pablo</h3></li>
   <li><h3>U202123655 Rojas Reategui Victor Manuel</h3></li>
