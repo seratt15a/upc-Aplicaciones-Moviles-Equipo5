@@ -4,9 +4,9 @@
   <h2>Carrera: Ingeniería de Software</h2>
   <h2>Ciclo: 2025-10</h2>
 <br>
-  <h2>Curso: 1ASI0730 Aplicaciones Web</h2>
-  <h2>Sección: 4378</h2>
-  <h2>Profesor: Angel Augusto Velasquez Nuñez</h2>
+  <h2>Curso: 1ASI0730 Aplicaciones  Moviles </h2>
+  <h2>Sección: 12614</h2>
+  <h2>Profesor: David Gerardo Quevedo Velasco</h2>
 <br>
  <h1>Informe TF1</h1>
   <h2>Startup: IA: Inteligencia Artesanal</h2>
@@ -14,7 +14,7 @@
 <br>
   <h2>Integrantes</h2>
 <ul style="list-style: none;">
-  <li><h3>U202222001 Aliaga Urbina Wilder Gonzalo</h3></li>
+  <li><h3>U202310425 Aguirre Castillo Sergio Cesar</h3></li>
   <li><h3>U202220138 Ramírez Cabrera Kenyi Efraín</h3></li>
   <li><h3>U202223286 Rodriguez Parco Joseph Pablo</h3></li>
   <li><h3>U202123655 Rojas Reategui Victor Manuel</h3></li>
@@ -134,37 +134,30 @@
     - [3.4. Product Backlog](#34-product-backlog)
 
 
-- [Capítulo IV: Product Design](#c4)
-    - [4.1. Style Guidelines](#41-style-guidelines)
-        - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
-        - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
-    - [4.2. Information Architecture](#42-information-architecture)
-        - [4.2.1. Organization Systems](#421-organization-systems)
-        - [4.2.2. Labeling Systems](#422-labeling-systems)
-        - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
-        - [4.2.4. Searching Systems](#424-searching-systems)
-        - [4.2.5. Navigation Systems](#425-navigation-systems)
-    - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
-        - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
-        - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
-    - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
-        - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
-        - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
-        - [4.4.3. Web Applications Mock-ups](#443-web-applications-mock-ups)
-        - [4.4.4. Web Applications User Flow Diagrams](#444-web-applications-user-flow-diagrams)
-    - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
-    - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
-        - [4.6.1. Software Architecture Context Diagram](#461-software-architecture-context-diagram)
-        - [4.6.2. Software Architecture Container Diagrams](#462-software-architecture-container-diagrams)
-        - [4.6.3. Software Architecture Components Diagrams](#463-software-architecture-components-diagrams)
-    - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
-        - [4.7.1. Class Diagrams](#471-class-diagrams)
-        - [4.7.2. Class Dictionary](#472-class-dictionary)
-    - [4.8. Database Design](#48-database-design)
-        - [4.8.1. Database Diagram](#481-database-diagram)
+- [Capítulo IV: Solution Software Design](#c4)
+    - [4.1. Strategic-Level Domain-Driven Design]  
+      - [4.1.1. EventStorming]  
+        - [4.1.1.1. Candidate Context Discovery]  
+        - [4.1.1.2. Domain Message Flows Modeling]  
+        - [4.1.1.3. Bounded Context Canvases]  
+      - [4.1.2. Context Mapping]  
+      - [4.1.3. Software Architecture]  
+        - [4.1.3.1. Software Architecture Context Level Diagrams]  
+        - [4.1.3.2. Software Architecture Container Level Diagrams]  
+        - [4.1.3.3. Software Architecture Deployment Diagrams]  
+    - [4.2. Tactical-Level Domain-Driven Design]  
+      - [4.2.X. Bounded Context:][Nombre del Contexto Acotado]  
+        - [4.2.X.1. Domain Layer]  
+        - [4.2.X.2. Interface Layer]  
+        - [4.2.X.3. Application Layer]  
+        - [4.2.X.4. Infrastructure Layer]  
+        - [4.2.X.5. Bounded Context Software Architecture Component Level Diagrams]  
+        - [4.2.X.6. Bounded Context Software Architecture Code Level Diagrams]  
+        - [4.2.x.6.1. Bounded Context Domain Layer Class Diagrams]  
+        - [4.2.x.6.2. Bounded Context Database Design Diagram]  
 
 
-- [Capítulo V: Product Implementation, Validation & Deployment](#c5)
+- [Capítulo VI: Product Implementation, Validation & Deployment](#c5)
     - [5.1. Software Configuration Management](#51-software-configuration-management)
         - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
         - [5.1.2. Source Code Management](#512-source-code-management)
