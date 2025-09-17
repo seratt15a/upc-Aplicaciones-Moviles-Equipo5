@@ -1389,7 +1389,21 @@ Identificación de Aggregates:
 - Usuario (propietario, técnico o proveedor).
 
 Mantenimiento (con asignación, estado y resultados).
+
 #### 4.1.1.1.  Candidate Context Discovery
+Durante esta etapa se aplicó la técnica Start With Value, con el objetivo de identificar primero el valor principal que la aplicación debe ofrecer: evitar pérdidas económicas y mejorar la eficiencia de los mantenimientos de equipos de refrigeración.
+
+Candidate Bounded Contexts Identificados
+
+| Bounded Context | Descripción breve | Tipo |
+|-----------------|-------------------|------|
+| **Gestion de equipos** | Registro, monitoreo y alertas en tiempo real de equipos de refrigeración. | Core |
+| **Gestión de Mantenimientos** | Programación, asignación y ejecución de mantenimientos preventivos/correctivos. | Core |
+| **Gestión de Usuarios** | Autenticación, perfiles de dueños, técnicos y proveedores. | Supporting |
+| **Pagos y Suscripciones** | Planes premium, historial de facturación, renovación automática. | Supporting |
+| **Reportes y Dashboard** | Generación de métricas, exportación de reportes y visualización de indicadores. | Generic |
+| **Notificaciones** | Envío de alertas y recordatorios vía correo, SMS o push. | Generic |
+
 #### 4.1.1.2.  Domain Message Flows Modeling
 #### 4.1.1.3.  Bounded Context Canvases
 #### 4.1.2. Context Mapping
