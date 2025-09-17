@@ -1335,6 +1335,60 @@ Escala de Story Points (Fibonacci):
 ## Capítulo IV: Solution Software Design <a id="c4"></a>
 ### 4.1. Strategic-Level Domain-Driven Design
 #### 4.1.1. EventStorming
+Con el objetivo de realizar un modelado colaborativo y estratégico del dominio de OsitoPolar, se llevó a cabo una sesión de EventStorming, una técnica visual centrada en eventos del dominio que permite identificar flujos de negocio, entidades relevantes, actores y límites naturales del sistema.
+Objetivo: Comprender cómo los usuarios (dueños de negocios y técnicos) interactúan con la plataforma, desde una perspectiva orientada a eventos.
+
+Herramientas utilizadas:
+
+Herramienta visual: Miro
+Plataforma de reunión: Discord
+Duración: 1 hora
+Participantes: 5 miembros del equipo
+
+Actividades realizadas:
+
+Identificación de eventos de dominio
+Ejemplos: Usuario registra un equipo de refrigeración, Sistema detecta alerta de temperatura, Técnico recibe notificación de mantenimiento, Usuario confirma visita, Sistema genera historial técnico.
+
+Agrupación de eventos por flujo de valor
+Se estructuraron flujos ideales (happy paths), como la programación exitosa de un mantenimiento, y flujos de error (unhappy paths), como alertas no atendidas a tiempo.
+
+Identificación de puntos críticos (Pivotal Points):
+- La detección automática de fallas en equipos.
+- La asignación de técnicos disponibles.
+- La confirmación de visitas por parte de los clientes.
+
+Detección de puntos de dolor (Pain Points):
+- Fallas no detectadas a tiempo.
+- Pérdida de historial técnico.
+- Mala coordinación entre clientes y técnicos.
+
+Asignación de comandos y actores:
+- Registrar Equipo (Usuario)
+- Generar Alerta (Sistema)
+- Asignar Técnico (Administrador del servicio)
+- Confirmar Mantenimiento (Técnico/Usuario)
+
+Políticas del sistema:
+- Validación de roles y permisos.
+- Restricciones comerciales (técnico asignado solo dentro de su zona).
+- Autenticación segura de usuarios.
+
+Modelos de lectura (Read Models):
+- Dashboard con estado de equipos en tiempo real.
+- Historial técnico por equipo.
+- Reportes de incidencias y mantenimientos.
+
+Sistemas externos:
+- Integración con sensores IoT para monitoreo en tiempo real.
+- Pasarela de pagos (para suscripciones premium).
+- Servicios de mensajería para notificaciones (email/SMS).
+
+Identificación de Aggregates:
+- EquipoRefrigeracion (agregado raíz que encapsula historial, alertas y mantenimientos).
+- Usuario (propietario, técnico o proveedor).
+
+Mantenimiento (con asignación, estado y resultados).
 #### 4.1.1.1.  Candidate Context Discovery
 #### 4.1.1.2.  Domain Message Flows Modeling
 #### 4.1.1.3.  Bounded Context Canvases
