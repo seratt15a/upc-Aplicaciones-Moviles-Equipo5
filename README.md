@@ -1332,8 +1332,126 @@ Escala de Story Points (Fibonacci):
 
 
 
-## Capítulo IV: Product Design <a id="c4"></a>
+## Capítulo IV: Solution Software Design <a id="c4"></a>
+### 4.1. Strategic-Level Domain-Driven Design
+#### 4.1.1. EventStorming
+Con el objetivo de realizar un modelado colaborativo y estratégico del dominio de OsitoPolar, se llevó a cabo una sesión de EventStorming, una técnica visual centrada en eventos del dominio que permite identificar flujos de negocio, entidades relevantes, actores y límites naturales del sistema.
+Objetivo: Comprender cómo los usuarios (dueños de negocios y técnicos) interactúan con la plataforma, desde una perspectiva orientada a eventos.
 
+Herramientas utilizadas:
+
+- Herramienta visual: Miro
+- Plataforma de reunión: Discord
+- Duración: 1 hora
+- Participantes: 5 miembros del equipo
+
+Actividades realizadas:
+
+Identificación de eventos de dominio
+Ejemplos: Usuario registra un equipo de refrigeración, Sistema detecta alerta de temperatura, Técnico recibe notificación de mantenimiento, Usuario confirma visita, Sistema genera historial técnico.
+
+Agrupación de eventos por flujo de valor
+Se estructuraron flujos ideales (happy paths), como la programación exitosa de un mantenimiento, y flujos de error (unhappy paths), como alertas no atendidas a tiempo.
+
+Identificación de puntos críticos (Pivotal Points):
+- La detección automática de fallas en equipos.
+- La asignación de técnicos disponibles.
+- La confirmación de visitas por parte de los clientes.
+
+Detección de puntos de dolor (Pain Points):
+- Fallas no detectadas a tiempo.
+- Pérdida de historial técnico.
+- Mala coordinación entre clientes y técnicos.
+
+Asignación de comandos y actores:
+- Registrar Equipo (Usuario)
+- Generar Alerta (Sistema)
+- Asignar Técnico (Administrador del servicio)
+- Confirmar Mantenimiento (Técnico/Usuario)
+
+Políticas del sistema:
+- Validación de roles y permisos.
+- Restricciones comerciales (técnico asignado solo dentro de su zona).
+- Autenticación segura de usuarios.
+
+Modelos de lectura (Read Models):
+- Dashboard con estado de equipos en tiempo real.
+- Historial técnico por equipo.
+- Reportes de incidencias y mantenimientos.
+
+Sistemas externos:
+- Integración con sensores IoT para monitoreo en tiempo real.
+- Pasarela de pagos (para suscripciones premium).
+- Servicios de mensajería para notificaciones (email/SMS).
+
+Identificación de Aggregates:
+- EquipoRefrigeracion (agregado raíz que encapsula historial, alertas y mantenimientos).
+- Usuario (propietario, técnico o proveedor).
+
+Mantenimiento (con asignación, estado y resultados).
+
+#### 4.1.1.1.  Candidate Context Discovery
+Durante esta etapa se aplicó la técnica Start With Value, con el objetivo de identificar primero el valor principal que la aplicación debe ofrecer: evitar pérdidas económicas y mejorar la eficiencia de los mantenimientos de equipos de refrigeración.
+
+Candidate Bounded Contexts Identificados
+
+| Bounded Context | Descripción breve | Tipo |
+|-----------------|-------------------|------|
+| **Gestion de equipos** | Registro, monitoreo y alertas en tiempo real de equipos de refrigeración. | Core |
+| **Gestión de Mantenimientos** | Programación, asignación y ejecución de mantenimientos preventivos/correctivos. | Core |
+| **Gestión de Usuarios** | Autenticación, perfiles de dueños, técnicos y proveedores. | Supporting |
+| **Pagos y Suscripciones** | Planes premium, historial de facturación, renovación automática. | Supporting |
+| **Reportes y Dashboard** | Generación de métricas, exportación de reportes y visualización de indicadores. | Generic |
+| **Notificaciones** | Envío de alertas y recordatorios vía correo, SMS o push. | Generic |
+
+#### 4.1.1.2.  Domain Message Flows Modeling
+Para visualizar la colaboración entre los contextos, se utilizó Domain Storytelling.
+
+Caso 1: Registro y Monitoreo de un Equipo:
+- El usuario registra un nuevo equipo de refrigeración.
+- El contexto de Gestión de Equipos guarda los datos.
+- El sistema conecta con sensores IoT y comienza el monitoreo.
+- Si se detecta una falla, se dispara un evento al contexto de Gestión de Mantenimientos.
+- El sistema asigna un técnico disponible y envía una notificación al usuario.
+
+Bounded Contexts involucrados:
+- Gestión de Equipos
+- Gestión de Mantenimientos
+- Notificaciones
+
+
+
+
+Caso 2: Programación de un Mantenimiento
+- El sistema detecta que un equipo requiere mantenimiento preventivo.
+- El contexto de Gestión de Mantenimientos genera una orden.
+- El usuario confirma la programación.
+- El técnico asignado recibe la orden y registra el resultado.
+- Se actualiza el historial en el contexto de Gestión de Equipos.
+
+Bounded Contexts involucrados:
+- Gestión de Mantenimientos
+- Gestión de Usuarios
+- Gestión de Equipos
+
+
+
+#### 4.1.1.3.  Bounded Context Canvases
+#### 4.1.2. Context Mapping
+#### 4.1.3. Software Architecture
+#### 4.1.3.1.  Software architecture Context Level Diagrams
+#### 4.1.3.2.  Software architecture Container Level Diagrams
+#### 4.1.3.3.  Software Architecture Deployment Diagrams
+### 4.2. Tactial-Level Domain-Driven Design
+#### 4.2.X. Bounded Context: <Bounded Context Name>
+#### 4.2.X.1.  Domain Layer
+#### 4.2.X.2.  Interface Layer
+#### 4.2.X.3.  Application Layer
+#### 4.2.X.4.  Infrastructure Layer
+#### 4.2.X.5.  Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.X.6.  Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.X.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.X.6.2. Bounded Context Database Design Diagram
 ### 4.1. Style Guidelines
 #### 4.1.1. General Style Guidelines
 
