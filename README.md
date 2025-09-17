@@ -1340,10 +1340,10 @@ Objetivo: Comprender cómo los usuarios (dueños de negocios y técnicos) intera
 
 Herramientas utilizadas:
 
-Herramienta visual: Miro
-Plataforma de reunión: Discord
-Duración: 1 hora
-Participantes: 5 miembros del equipo
+- Herramienta visual: Miro
+- Plataforma de reunión: Discord
+- Duración: 1 hora
+- Participantes: 5 miembros del equipo
 
 Actividades realizadas:
 
